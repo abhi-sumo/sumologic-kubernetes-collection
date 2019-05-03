@@ -106,10 +106,7 @@ data:
       metric_data_format prometheus
     </match>
     <match prometheus.datapoint.kubelet**>
-      @type sumologic
-      endpoint "#{ENV['SUMO_ENDPOINT_METRICS_KUBELET']}"
-      data_type metrics
-      metric_data_format prometheus
+      @type stdout
     </match>
     <match prometheus.datapoint.kube-controller-manager**>
       @type sumologic
